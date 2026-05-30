@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #020617, #1e293b, #0f172a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  width: 360px;
+  padding: 22px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 25px 70px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#themeBtn {
+  border: none;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.display {
+  height: 120px;
+  background: rgba(0,0,0,0.45);
+  border-radius: 22px;
+  padding: 20px;
+  margin-bottom: 22px;
+  color: white;
+  text-align: right;
+  overflow: hidden;
+}
+
+#history {
+  min-height: 25px;
+  font-size: 16px;
+  color: #94a3b8;
+}
+
+#screen {
+  font-size: 42px;
+  font-weight: bold;
+  margin-top: 12px;
+  word-wrap: break-word;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+button {
+  height: 65px;
+  border: none;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  background: rgba(255,255,255,0.14);
+  box-shadow: inset 0 0 8px rgba(255,255,255,0.08);
+  transition: 0.25s;
+}
+
+button:hover {
+  transform: translateY(-4px) scale(1.04);
+  background: rgba(255,255,255,0.25);
+}
+
+button:active {
+  transform: scale(0.92);
+}
+
+.operator {
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+}
+
+.equal {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.clear {
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+}
+
+.delete {
+  background: linear-gradient(135deg, #f97316, #c2410c);
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.light {
+  background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+}
+
+.light .calculator {
+  background: rgba(255,255,255,0.75);
+}
+
+.light .top-bar {
+  color: #020617;
+}
+
+.light .display {
+  background: #e2e8f0;
+  color: #020617;
+}
+
+.light button {
+  color: #020617;
+  background: rgba(255,255,255,0.8);
+}
+
+@media (max-width: 420px) {
+  .calculator {
+    width: 92%;
+  }
+
+  button {
+    height: 58px;
+    font-size: 20px;
+  }
+
+  #screen {
+    font-size: 34px;
+  }
+}
